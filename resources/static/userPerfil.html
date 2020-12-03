@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+    <link rel="stylesheet" href="./css/style-global.css">
+    <link rel="stylesheet" href="./css/style-perfil.css">
+    <title>MeAdote</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="/index.html" style="text-decoration: none"><div class="logo">
+                <img src="./assets/logo.png" alt="">
+                <p><span>Me</span>Adote</p>
+            </div></a>            
+            <div class="nav-links">
+                <ul>
+                    <li><a href="adote.html">Como Funciona</a></li>
+                    <li><a href="adote.html">Adote</a></li>
+                    <li><a href="google.com">Doe</a></li>
+                    <li><a href="adote.html">Sobre</a></li>
+                    <li><a href="adote.html">Contato</a></li>
+                  </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="dashboard">
+                <h1>Meu perfil</h1>
+
+                <ul>
+                    <li id="dashLink"> 
+                        <a href="./userPerfil.html"  style="color: #3cc7fa;">
+                            <div class="icon">
+                                <img src="./assets/icons/user.svg" alt="">
+                                <div class="select-filtro hoverIconS"></div>
+                            </div>
+                            Informações Pessoais
+                        </a>
+                    </li>
+
+                    <li id="dashLink"> 
+                        <a  href="./userPet.html">
+                            <div class="icon">
+                                <img src="./assets/icons/menu.svg" alt=""> 
+                                <div class="select-filtro"></div>
+                            </div>
+                            Meus Pets
+                        </a>
+                    </li>
+                        
+                    <li id="dashLink"> 
+                        <a href="">
+                            <div class="icon">
+                                <img src="./assets/icons/settings.svg" alt="">
+                                <div class="select-filtro"></div>
+                            </div> 
+                            Configurar Filtro
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="logout" onclick="logoutUser()">
+                    <button>Sair</button>
+                </div>
+            </div>
+            <div class="container-perfil">
+
+                <div class="perfil-desc">
+
+                    <div class="perfil-logo">
+                        <div class="perfil-img">
+                            <img id="imagem" class="img-perfil" src="./assets/icons/userProfile.svg" alt="">
+                            <label for="fotoPerfil"><img src="./assets/icons/add-user.svg"  alt="upload"></label>
+                            <input type="file" name="foto" id="fotoPerfil" accept="image/png, image/jpeg, image/gif">
+                        </div>
+    
+                        <p id="nome-display">Nome do usuario</p>
+                    </div>
+                    <div class="ln1">
+                        <div class="col1">
+                            <textarea name="descricao" id="descricao" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-form">
+                    <form action="" id="formUserData">
+
+                        <div class="ln">
+                            <div class="col"">
+                                <label class="nome" for="nome">Nome</label>
+                                <input type="text" name="nome" id="nome">
+                            </div>
+                            <div class="col">
+                                <label class="email" for="email">Email</label>
+                                <input type="email" name="email" id="email">
+                            </div>
+                        </div>
+
+                        <div class="ln">
+                            <div class="col">
+                                <label for="telefone">Telefone</label>
+                                <input type="text" name="telefone" id="telefone">
+                            </div>
+                            <div class="col">
+                                <label for="celular">Celular</label>
+                                <input type="text" name="celular" id="celular">
+                            </div>                            
+                        </div>
+
+                        <div class="ln">
+                            <div class="col">
+                                <label for="cep">Cep</label>
+                                <input type="text" name="cep" id="cep" 
+                                onblur="pesquisacep(this.value);">
+                            </div>
+                            <div class="col">
+                                <label for="logradouro">Logradouro</label>
+                                <input type="text" name="logradouro" id="logradouro">
+                            </div>
+                        </div>
+
+                        <div class="ln">
+                            <div class="col">
+                                <label for="bairro">Bairro</label>
+                                <input type="text" name="bairro" id="bairro">
+                            </div>
+                            <div class="col">
+                                <label for="cidade">Cidade</label>
+                                <input type="text" name="cidade" id="cidade">
+                            </div>
+                        </div>
+                        <div class="ln">
+                            <div class="col">
+                                <button>Salvar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/dashboard.js"></script>
+    <script src="./js/imgLoad.js"></script>
+    <script src="./js/perfil.js"></script>
+    <script src="./js/cep.js"></script>
+</body>
+</html>

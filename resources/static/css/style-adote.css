@@ -1,0 +1,140 @@
+.navbar{
+  background-color: #1e1b26;
+  position: relative;
+  box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.548);
+  position: relative;
+  z-index: 201;
+}
+
+.container{
+  width: 100%;
+  height: 88.5vh;
+  display: flex;
+}
+
+
+.dashboard{
+  width: 25%;
+  min-width: 350px;
+  height: 100%;
+  justify-content: space-between;
+  background-color: #1e1b26;
+  position: relative;
+  border-right: 10px solid #fafafa;
+  border-left:  10px solid #fafafa;
+  border-bottom:  5px solid #fafafa;
+  border-top:  5px solid #fafafa;
+  z-index: 200;
+}
+
+
+.controles-dash{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  font-size: 30px;
+  color: #fafafa;
+}
+
+.container-filtro{
+  height: 70%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  color: #fafafa;
+}
+
+.container-filtro p{
+  color: #fafafa;
+  font-weight: 300;
+}
+
+
+.card-container{
+  width: 75%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.card-container::before{
+  content: "";
+  width: 100%;
+  height: 88.5%;
+  position: absolute;
+  background-color: rgba(19, 0, 0, 0.315);
+  filter: blur(1.6px);
+  overflow: hidden;
+  z-index: 2;
+}
+.card-container::after{
+  content: "";
+  width: 100%;
+  height: 88.5%;
+  position: absolute;
+  background-color: rgba(247, 0, 0, 0.199);
+  background-image: url(../assets/3813007.jpg);  
+  background-size: 20%;
+  filter: blur(3px);
+  overflow: hidden;
+  z-index: 1;
+}
+
+
+.card{
+  width: 40%;
+  min-width: 400px;
+  min-height: 500px;
+  height: 90%;
+  border-radius: 5px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.4rem;
+  border: 1px solid #333;
+  box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.89);
+  position: relative;
+  z-index: 3;
+}
+
+.img{
+  width: 100%;
+  height: 90%;
+  border-radius: 5px;
+  background-color: violet;
+}
+
+.controles-escolha{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 5rem;
+}
+
+.btn-like i, .btn-dislike i{
+  color: #1e1b26;
+  transition: 1s;
+}
+
+.btn-like i:hover{
+  color: rgb(7, 175, 7);
+  transition: 0.5s;
+}
+
+.btn-dislike i:hover{
+  color: #ca2626;
+  transition: 0.5s;
+}
+
+
+.selected{
+  
+}
